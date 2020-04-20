@@ -13,10 +13,17 @@ function checkPallindrome(str) {
 	}
 }
 
-//Method-2 using built functions
+//Method-2 using built-in functions
 function pallindrome(str) {
 	let reversed = str.split('').reverse().join('');
 	return str === reversed;
+}
+
+//Method-3 using Regular Expression
+function palindrome(str) {
+	return (
+		str.replace(/[\W_]/g, '').toLowerCase() === str.replace(/[\W_]/g, '').toLowerCase().split('').reverse().join('')
+	);
 }
 
 /* inputs */
