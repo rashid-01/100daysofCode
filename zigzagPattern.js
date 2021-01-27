@@ -4,10 +4,10 @@ function printZigZag(n) {
 	let flag = 0;
 	for (var i = 1; i <= n; i++) {
 		if (flag == 0) {
-			console.log('&nbsp;' + i + '&nbsp;' + '<br/>');
+			console.log(' ' + i + ' ');
 			flag = 1;
 		} else {
-			console.log(i + '&nbsp;' + ++i + '<br/>');
+			console.log(i + ' ' + ++i);
 			flag = 0;
 		}
 	}
