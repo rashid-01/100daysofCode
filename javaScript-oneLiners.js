@@ -54,3 +54,28 @@ const FahrenheitToCelcius = (fahrenheit) => (fahrenheit - 32) * 5 / 9;
 console.log(celciusToFahrenheit(59));
 console.log(FahrenheitToCelcius(67))
 
+/*Make a webpage editable */
+document.body.contentEditable(true);
+
+/*Prevent an Object to add/modify it's property */
+Object.freeze(objectName);
+//For example
+let profile = {
+    name:'Rashid'
+}
+Object.freeze(profile);
+profile.name = 'Ashraf'; //Not allowed
+profile.age = 26; //Not allowed
+
+//Only modify properties and preventing to add another properties
+Object.seal(profile)
+
+/*Add/modify only some property of an object */
+Object.defineProperty(profile, 'age', {
+    value: 26,
+    writable: false
+}) //This adds a new property into the object and makes it read-only
+profile.name = 'Ashraf'; //Value of name will be changed
+profile.age = 29 //value of age will not changed
+
+console.log(Math.max()) //-infinity //Math.max() always compares any no. with 1 and -infinity is the lowest no. in maths.
